@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import CreatePost from './Components/CreatePost/CreatePost';
+import DisplayPost from './Components/DisplayPost/DisplayPost';
+import CreatePost from './Components/DisplayPost/CreatePost/CreatePost';
 
 function App() {
 
@@ -7,7 +8,8 @@ function App() {
 
   return (
     <div>
-      <CreatePost parentEntries={entries} />
+      <DisplayPost parentEntries={entries} />
+      <CreatePost />
     </div>
   );
 }
