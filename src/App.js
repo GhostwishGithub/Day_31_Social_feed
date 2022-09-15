@@ -4,12 +4,17 @@ import CreatePost from './Components/DisplayPost/CreatePost/CreatePost';
 
 function App() {
 
-  const [entries, setEntries] = useState([{Name: 'name test', Post: 'post test'}])
+  const [entries, setEntries] = useState([{name: 'name test', post: 'post test'}])
+
+  function addNewPost(entry) {
+    let tempPosts = [entry, ...entries];
+    setEntries(tempPosts);
+  }
 
   return (
     <div>
       <DisplayPost parentEntries={entries} />
-      <CreatePost />
+      <CreatePost addNewPost={addNewPost}/>
     </div>
   );
 }

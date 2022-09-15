@@ -12,8 +12,8 @@ const DisplayPost = (props) => {
           {props.parentEntries.map((entry, index) => {
             return (
               <tr>
-                <td>{entry.Name}</td>
-                <td>{entry.Post}</td>
+                <td>{entry.name}</td>
+                <td>{entry.post}</td>
               </tr>
             )
           })}
