@@ -1,23 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import CreatePost from './Components/CreatePost/CreatePost';
 
 function App() {
+
+  const [entries, setEntries] = useState([{Name: 'name test', Post: 'post test'}])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <CreatePost parentEntries={entries} />
     </div>
   );
 }
