@@ -8,10 +8,14 @@ const CreatePost = (props) => {
 
     function handleSubmit(event){
         event.preventDefault();
+        let newPost = {
+            name: name,
+            post: post
+        }
     }
 
     return (
-        <form>
+        <form OnSubmit={handleSubmit}>
             <label>Name</label>
             <input type='string' value={name} onChange={(event) => setName(event.target.value)} />
             <label>Post</label>
